@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Autenticador de senha</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Autenticador de senha</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    
-</body>
-    <script src="jquery.js"></script>
-    <script src="command.js"></script>
+    <body>
+        
+        <script src="jquery.js"></script>
+        <script src="command.js"></script>
 
-    <!-- Cadastro -->
-    <div class="form-container cadastro-container">
-        <form action="#">
-            <h1>Crie sua conta</h1>
-            <input type="text" placeholder="Nome" required />
-            <input type="email" placeholder="Email" required />
-            <input type="password" placeholder="Senha" required />
-            <button>Cadastro</button>
-        </form>
-    </div>
+        <main class="container">
+            
+            <!-- Cadastro -->
+            <div class="form-container cadastro-container">
+                <form action="#">
+                    <h1>Crie sua conta</h1>
+                    <input type="text" placeholder="Nome" required />
+                    <input type="email" placeholder="Email" required />
+                    <input type="password" placeholder="Senha" required />
+                    <button>Cadastro</button>
+                </form>
+            </div>
 
-    <!-- Login -->
-     <div class="form-container login-container">
-        <form action="#">
-            <h1>Acesse sua conta</h1>
-            <input type="text" placeholder="Nome" required />
-            <input type="email" placeholder="Email" required />
-            <input type="password" placeholder="Senha" required />
-            <a href="#"> Esqueceu sua senha?</a>
-            <button>Cadastro</button>
-        </form>
-     </div>
-    
+            <!-- Login -->
+            <div class="form-container login-container">
+                <form action="#">
+                    <h1>Acesse sua conta</h1>
+                    <input type="email" placeholder="Email" required />
+                    <input type="password" placeholder="Senha" required />
+                    <a href="#"> Esqueceu sua senha ou ainda não é registrado?</a>
+                    <button>Acessar</button>
+                </form>
+            </div>
+
+            <!--Card slider-->
+            <div>
+                <div class="overlay">
+                    <div class="painel-overlay overlay-esquerdo">
+                        <h1>Bem vindo de volta!</h1>
+                        <p>Para se conectar basta informar seus dados de login.</p>
+                    </div>
+
+                    <div class="painel-overlay overlay-direito">
+                        <h1>Seja bem vindo!</h1>
+                        <p>Para se cadastrar é necessário criar um usuário e senha.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+        
 </html>

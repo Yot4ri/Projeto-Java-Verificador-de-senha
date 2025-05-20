@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Baumans&family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence&display=swap');
+
+body{
+    background-color: #f1f0f1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:100vh;
+    margin: -10px 0px 50px;
+}
+
+.container{
+    background-color:#fff;
+    border-radius:10px;
+    box-shadow:
+    position:relative;
+    overflow:hidden;
+    width:700px;
+    height:100%;
+    min-height:500px;
+}
+
+p{
+    font-family:"Baumans",system-ui;
+    font-weight: 400;
+    font-style:normal;
+}
