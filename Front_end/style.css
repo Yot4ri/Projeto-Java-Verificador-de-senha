@@ -1,28 +1,215 @@
 @import url('https://fonts.googleapis.com/css2?family=Baumans&family=Pixelify+Sans:wght@400..700&family=Sixtyfour+Convergence&display=swap');
 
-body{
-    background-color: #f1f0f1;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height:100vh;
-    margin: -10px 0px 50px;
+/* Reset e estilos básicos */
+* {
+  box-sizing: border-box;
 }
 
-.container{
-    background-color:#fff;
-    border-radius:10px;
-    box-shadow:
-    position:relative;
-    overflow:hidden;
-    width:700px;
-    height:100%;
-    min-height:500px;
+body {
+  background: #f6f5f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Baumans', cursive;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Estilo do contêiner principal */
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+              0 10px 10px rgba(0,0,0,0.22);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+/* Estilo dos formulários */
+.formulario-container {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.formulario-login {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.formulario-cadastro {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Ativação do painel direito */
+.container.painel-direito-ativo .formulario-cadastro {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: mostrar 0.6s;
+}
+
+.container.painel-direito-ativo .formulario-login {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Estilo dos formulários */
+form {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+/* Estilo dos inputs */
+input {
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+}
+
+/* Estilo dos botões */
+button {
+  border-radius: 20px;
+  border: 1px solid #cb1b38;
+  background-color: #cb1b38;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  margin-top: 10px;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.fantasma {
+  background-color: transparent;
+  border-color: #ffffff;
+}
+
+/* Estilo dos links */
+a {
+  color: #333;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+/* Estilo do painel de sobreposição */
+.sobreposicao-container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.container.painel-direito-ativo .sobreposicao-container{
+  transform: translateX(-100%);
+}
+
+.sobreposicao {
+  background: linear-gradient(to right, #cb1b38, #d22c64);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: #ffffff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.container.painel-direito-ativo .sobreposicao {
+  transform: translateX(50%);
+}
+
+.painel-sobreposicao {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.painel-esquerdo {
+  transform: translateX(-20%);
+}
+
+.container.painel-direito-ativo .painel-esquerdo {
+  transform: translateX(0);
+}
+
+.painel-direito {
+  right: 0;
+  transform: translateX(0);
+}
+
+.container.painel-direito-ativo .painel-direito {
+  transform: translateX(20%);
+}
+
+/* Animação de exibição */
+@keyframes mostrar {
+  0%, 49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%, 100% {
+    opacity: 1;
+    z-index: 5;
+  }
 }
 
 p{
     font-family:"Baumans",system-ui;
     font-weight: 400;
     font-style:normal;
+}
+
+.txtpequeno{
+    font-size:14px;
+}
+
+.esqueceuSenha{
+    font-style:normal;
+    color:#cb1b38;
 }

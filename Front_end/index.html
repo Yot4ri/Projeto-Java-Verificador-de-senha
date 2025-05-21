@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Autenticador de senha</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
+<body>
+  <div class="container" id="container">
+    <!-- Formulário de Cadastro -->
+    <div class="formulario-container formulario-cadastro">
+      <form action="#">
+        <h1>Criar Conta</h1>
+        <input type="text" placeholder="Nome" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Senha" required />
+        <button>Cadastrar</button>
+      </form>
+    </div>
 
-    <body>
-        
-        <script src="jquery.js"></script>
-        <script src="command.js"></script>
+    <!-- Formulário de Login -->
+    <div class="formulario-container formulario-login">
+      <form action="#">
+        <h1>Entrar</h1>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Senha" required />
+        <p>
+        <a class="esqueceuSenha">Esqueceu sua senha</a><br>
+        <span class="txtpequeno"> Ou </span><br> 
+        <a class="esqueceuSenha">Ainda não é registrado?</a>
+        </p>
+        <button>Entrar</button>
+      </form>
+    </div>
 
-        <main class="container">
-            
-            <!-- Cadastro -->
-            <div class="form-container cadastro-container">
-                <form action="#">
-                    <h1>Crie sua conta</h1>
-                    <input type="text" placeholder="Nome" required />
-                    <input type="email" placeholder="Email" required />
-                    <input type="password" placeholder="Senha" required />
-                    <button>Cadastro</button>
-                </form>
-            </div>
+    <!-- Painel de Sobreposição -->
+    <div class="sobreposicao-container">
+      <div class="sobreposicao">
+        <div class="painel-sobreposicao painel-esquerdo">
+          <h1>Seja bem vindo(a)!</h1>
+          <p>Insira seus dados pessoais e comece sua jornada conosco</p>
+          <button class="fantasma" id="entrar">Entrar</button>
+        </div>
+        <div class="painel-sobreposicao painel-direito">
+          <h1>Bem-vindo(a) de volta!</h1>
+          <p>Para se manter conectado, faça login com suas informações pessoais</p>
+          <button class="fantasma" id="cadastrar">Cadastrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-            <!-- Login -->
-            <div class="form-container login-container">
-                <form action="#">
-                    <h1>Acesse sua conta</h1>
-                    <input type="email" placeholder="Email" required />
-                    <input type="password" placeholder="Senha" required />
-                    <a href="#"> Esqueceu sua senha ou ainda não é registrado?</a>
-                    <button>Acessar</button>
-                </form>
-            </div>
-
-            <!--Card slider-->
-            <div>
-                <div class="overlay">
-                    <div class="painel-overlay overlay-esquerdo">
-                        <h1>Bem vindo de volta!</h1>
-                        <p>Para se conectar basta informar seus dados de login.</p>
-                    </div>
-
-                    <div class="painel-overlay overlay-direito">
-                        <h1>Seja bem vindo!</h1>
-                        <p>Para se cadastrar é necessário criar um usuário e senha.</p>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </body>
-        
+  <script src="command.js"></script>
+</body>
 </html>
