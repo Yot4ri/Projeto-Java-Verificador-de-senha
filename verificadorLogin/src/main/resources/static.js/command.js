@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', function () {
     esqueceuSenha.forEach(link => {
         link.addEventListener("click", () => {
             container.classList.add("painel-direito-ativo");
-        })
-    })
+        });
+    });
 
     entrar.addEventListener("click", () => {
         container.classList.remove("painel-direito-ativo");
