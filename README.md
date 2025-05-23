@@ -28,7 +28,7 @@ Alex Teixeira da Silva.
 <br>
 
 ## ✅ Objetivo do software:
-### Permitir o cadastro e verificação de senhas distintas para acesso à plataforma.
+Permitir o cadastro e verificação de senhas distintas para acesso à plataforma.
 <br>
 
 ## Funcionalidades do sistema:
